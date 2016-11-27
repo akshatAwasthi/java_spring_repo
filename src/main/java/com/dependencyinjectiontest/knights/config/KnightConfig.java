@@ -11,8 +11,8 @@ import com.dependencyinjectiontest.knights.*;
 @ComponentScan(basePackageClasses=BraveKnight.class)
 public class KnightConfig {
 
-	@Bean()
-	public PrintStream stream() {
+	@Bean
+	public PrintStream func() {
 		return System.out;
 	}
 	
