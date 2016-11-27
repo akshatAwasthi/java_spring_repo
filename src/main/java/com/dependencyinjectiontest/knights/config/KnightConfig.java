@@ -1,20 +1,19 @@
 package com.dependencyinjectiontest.knights.config;
 
+import java.io.PrintStream;
+
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import com.dependencyinjectiontest.knights.*;
 
 @Configuration
+@ComponentScan(basePackageClasses=BraveKnight.class)
 public class KnightConfig {
 
 	@Bean
-	public Knight knight() {
-		return new BraveKnight(quest());
+	public PrintStream func() {
+		return System.out;
 	}
 	
-	@Bean
-	public Quest quest() {
-		return new DragonSlayingQuest(System.out);
-	}
-
 }
