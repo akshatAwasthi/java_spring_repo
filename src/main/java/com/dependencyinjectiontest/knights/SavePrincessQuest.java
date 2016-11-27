@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("dragonQuestBean")
-public class DragonSlayingQuest implements Quest{
-	
+@Component("princessQuestBean")
+public class SavePrincessQuest implements Quest{
+
 	@Autowired
 	@Qualifier("streamBean")
 	private PrintStream stream;

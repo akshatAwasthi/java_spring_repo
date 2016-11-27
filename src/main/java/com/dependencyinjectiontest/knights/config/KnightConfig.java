@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 import com.dependencyinjectiontest.knights.*;
 
 @Configuration
-@ComponentScan(basePackageClasses=BraveKnight.class)
+@ComponentScan(basePackageClasses=Knight.class)
 public class KnightConfig {
 
 	@Bean()
-	public PrintStream stream() {
+	public PrintStream streamBean() {
 		return System.out;
 	}
 	
