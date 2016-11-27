@@ -8,12 +8,12 @@ import com.dependencyinjectiontest.knights.*;
 public class KnightConfig {
 
 	@Bean
-	public Knight knight() {
-		return new BraveKnight(quest());
+	public Knight knightBean(Quest questBean) {
+		return new BraveKnight(questBean);
 	}
 	
 	@Bean
-	public Quest quest() {
+	public Quest questBean() {
 		return new DragonSlayingQuest(System.out);
 	}
 

@@ -9,7 +9,7 @@ public class KnightMain {
 	public static void main(String[] args) throws BeansException {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(KnightConfig.class);
 		//context.refresh();
-		Knight knight = (Knight)context.getBean("knight");
+		Knight knight = (Knight)context.getBean("knightBean");
 		knight.embarkOnQuest();
 		context.close();
 	}
