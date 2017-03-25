@@ -2,16 +2,23 @@ package com.dependencyinjectiontest.knights;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component("knight")
-public class BraveKnight implements Knight{
-	
+public class BraveKnight implements Knight {
+
 	@Autowired
-	@Qualifier("princessQuestBean")
-	private Quest quest;
-	
+	@Qualifier("thisBean")
+	private Quest quest; // field injection
+
+	private Quest quest2;
+
+	@Autowired
+	@Qualifier("dragonQuest")
+	public void setQuest2(Quest quest2) {
+		this.quest2 = quest2;
+	}
+
 	public void embarkOnQuest() {
 		quest.embark();
+		quest2.embark();
 	}
 }

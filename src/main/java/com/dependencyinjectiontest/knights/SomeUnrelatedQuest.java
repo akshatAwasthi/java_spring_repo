@@ -4,12 +4,13 @@ import java.io.PrintStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class DragonSlayingQuest implements Quest {
+public class SomeUnrelatedQuest implements Quest {
 
 	@Autowired
 	private PrintStream stream;
 
 	public void embark() {
-		stream.println("embarking on dragon slaying quest");
+		stream.println("Embarking on some unrelated quest!");
 	}
+
 }
