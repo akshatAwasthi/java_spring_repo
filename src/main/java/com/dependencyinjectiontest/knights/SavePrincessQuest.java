@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component("princessQuestBean")
-public class SavePrincessQuest implements Quest{
+public class SavePrincessQuest implements Quest {
 
 	@Autowired
 	private PrintStream stream;
-	
+
 	public void embark() {
-		stream.println("embarking on dragon slaying quest");
+		stream.println("embarking on princess quest");
 	}
 }
